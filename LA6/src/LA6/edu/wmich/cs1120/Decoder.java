@@ -34,7 +34,7 @@ public class Decoder implements IDecoder {
 				}
 			}
 			for(int i =0;i<a.size();i++) {
-				if (a.get(i)=='-') {
+				if (a.get(i)=='q') {
 					System.out.print("\n");
 				}else {
 					System.out.print(a.get(i));

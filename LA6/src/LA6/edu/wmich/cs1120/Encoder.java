@@ -27,8 +27,8 @@ public class Encoder implements IEncoder {
 				String p = Integer.toString((rand.nextInt(20)+1));
 				a.add(p.toCharArray()[0]);
 			}
-			
 		}
+		a.add('q');
 		}
 		a.add('z');
 		RandomAccessFile randomFile = new RandomAccessFile(outputFilePath, "rw");
