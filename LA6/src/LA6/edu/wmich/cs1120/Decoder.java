@@ -15,37 +15,36 @@ public class Decoder implements IDecoder {
 		try {
 			Scanner reader = new Scanner(f);
 			ArrayList<Character> a = new ArrayList<>();
-			//reader.
-			while(reader.hasNextLine()) {
+			// reader.
+			while (reader.hasNextLine()) {
 				char[] idk = reader.nextLine().toCharArray();
-				for (int i=0;i<idk.length;i++) {
-					
-				if(idk[i]=='z') {
-					break;
-				}
-				if (Character.isDigit(idk[i]) && Character.getNumericValue(idk[i]) != -1) {
-					int skip=Character.getNumericValue(idk[i]);
-					i = i+(skip-1);
-				}
-				else {
-					a.add(idk[i]);
-				//	System.out.print(idk[i]);
-				}
+				for (int i = 0; i < idk.length; i++) {
+
+					if (idk[i] == 'z') {
+						break;
+					}
+					if (Character.isDigit(idk[i]) && Character.getNumericValue(idk[i]) != -1) {
+						int skip = Character.getNumericValue(idk[i]);
+						i = i + (skip - 1);
+					} else {
+						a.add(idk[i]);
+						// System.out.print(idk[i]);
+					}
 				}
 			}
-			for(int i =0;i<a.size();i++) {
-				if (a.get(i)=='q') {
+			for (int i = 0; i < a.size(); i++) {
+				if (a.get(i) == 'q') {
 					System.out.print("\n");
-				}else {
+				} else {
 					System.out.print(a.get(i));
 				}
-				
+
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
+			 e.printStackTrace();
 		}
-		
+
 	}
 
 }
