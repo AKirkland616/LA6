@@ -31,7 +31,7 @@ public class Encoder implements IEncoder {
 			}
 			
 		}
-		a.add("-1".getBytes()[0]);
+		
 		//a.add('q');
 		}
 	
