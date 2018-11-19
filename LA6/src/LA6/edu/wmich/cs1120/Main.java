@@ -7,8 +7,7 @@ public class Main {
 		String inputFileName = "input.txt";
 		String encodedFileName = inputFileName+".encode";
 		encoder.encode(inputFileName,encodedFileName);
-		decoder.decode(encodedFileName);
-		
+		decoder.decode(encodedFileName);		
 	}
 }
 
