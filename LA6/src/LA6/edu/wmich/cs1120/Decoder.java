@@ -1,11 +1,8 @@
 package LA6.edu.wmich.cs1120;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Decoder implements IDecoder {
 
@@ -15,7 +12,7 @@ public class Decoder implements IDecoder {
 		try {
 			RandomAccessFile rF = new RandomAccessFile(filePath, "rw");
 			try {
-				while(1==1){
+				while(1 == 1){
 					System.out.print(rF.readChar());
 					int skip = rF.readInt();
 					if (skip==-1) {
@@ -23,6 +20,7 @@ public class Decoder implements IDecoder {
 					}
 					rF.skipBytes(skip);
 				}
+				rF.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

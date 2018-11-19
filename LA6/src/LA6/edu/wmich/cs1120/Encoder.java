@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -35,10 +34,18 @@ public class Encoder implements IEncoder {
 					rand.nextBytes(bA);
 					rF.write(bA);
 					}
+					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}				
+			}
+			reader.close();
+			try {
+				rF.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
