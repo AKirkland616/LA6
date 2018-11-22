@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class Decoder implements IDecoder {
-
+	/**
+	 * @param filePath takes a string file path to decode the file
+	 */
 	@Override
 	public void decode(String filePath) {
 		// TODO Auto-generated method stub

@@ -8,7 +8,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Encoder implements IEncoder {
-
+	/**
+	 * @param inputFileName take the file name and make it a string 
+	 * @param outputFilePath creates the output file to read and write for
+	 */
 	@Override
 	public void encode(String inputFileName, String outputFilePath) {
 		// TODO Auto-generated method stub
